@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="标记公式：行内公式：行内公式使用两个美元符包裹： \Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$$：$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$  ### 块级公式：  $$$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$\Gamma(n) = (n-1)!\qu">
+<meta name="keywords" content="base content">
+<meta property="og:type" content="article">
+<meta property="og:title" content="latex_base">
+<meta property="og:url" content="https:///kun0523.github.io/2018/11/04/latex-base/index.html">
+<meta property="og:site_name" content="Learning Notes">
+<meta property="og:description" content="标记公式：行内公式：行内公式使用两个美元符包裹： \Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$$：$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$  ### 块级公式：  $$$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$\Gamma(n) = (n-1)!\qu">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-11-04T13:27:47.437Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="latex_base">
+<meta name="twitter:description" content="标记公式：行内公式：行内公式使用两个美元符包裹： \Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$$：$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$  ### 块级公式：  $$$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$\Gamma(n) = (n-1)!\qu">
+
+
+
+
+
+
+  <link rel="canonical" href="https:///kun0523.github.io/2018/11/04/latex-base/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>latex_base | Learning Notes</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Learning Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">日常笔记</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https:///kun0523.github.io/2018/11/04/latex-base/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kun0523">
+      <meta itemprop="description" content="include machine learning, math, psychology,  etc.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Learning Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">latex_base
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-04 21:16:29 / 修改时间：21:27:47" itemprop="dateCreated datePublished" datetime="2018-11-04T21:16:29+08:00">2018-11-04</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/others/" itemprop="url" rel="index"><span itemprop="name">others</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="标记公式："><a href="#标记公式：" class="headerlink" title="标记公式："></a>标记公式：</h2><h3 id="行内公式："><a href="#行内公式：" class="headerlink" title="行内公式："></a>行内公式：</h3><p>行内公式使用两个美元符包裹：</p>
+<script type="math/tex; mode=display">\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$$：$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$
+
+### 块级公式：
+
+$$$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$</script><script type="math/tex; mode=display">\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N</script><script type="math/tex; mode=display">x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}</script><script type="math/tex; mode=display">x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}</script><h2 id="上下标："><a href="#上下标：" class="headerlink" title="上下标："></a>上下标：</h2><ol>
+<li>^  表示上标；</li>
+<li>_  表示下标；</li>
+<li>{}  表示括号内的内容为一个整体<br>​     <script type="math/tex">x^{y^z} = (1+e^x)^{-2xy^w}</script>:$x^{y^z} = (1+e^x)^{-2xy^w}$</li>
+<li>同时标上下标签：<br>​     - <script type="math/tex">w_i^j</script> : $w<em>i^j$<br>​     - $$w</em>{ij}^\prime$$ : $w_{ij}^\prime$</li>
+</ol>
+<h2 id="求和与求导："><a href="#求和与求导：" class="headerlink" title="求和与求导："></a>求和与求导：</h2><ol>
+<li>求和：<br>​     - <script type="math/tex">f(u) = f(\sum_{i=1}^Nx_i)</script> ： $f(u) = f(\sum<em>{i=1}^Nx_i)$<br>​     - $$$f(u) = f(\sum</em>{i=1}^Nx<em>i)<script type="math/tex">$ :</script>f(u) = f(\sum</em>{i=1}^Nx_i)$$</li>
+<li>求导：<br>​     - <script type="math/tex">\frac{\mathrm{d}f}{\mathrm{d}t}</script> : $\frac{\mathrm{d}f}{\mathrm{d}t}$<br>​     - <script type="math/tex">\frac{\partial f(u)}{\partial u}</script> : $\frac{\partial f(u)}{\partial u}$</li>
+</ol>
+<h2 id="分属表示："><a href="#分属表示：" class="headerlink" title="分属表示："></a>分属表示：</h2><ol>
+<li>\frac{分子}{分母}<br><script type="math/tex">\frac{a+b}{d+c}</script>: $\frac{a+b}{d+c}$</li>
+<li>分子 \over 分母<br><script type="math/tex">{a+b} \over {d+c}</script>: ${a+b} \over {d+c}$</li>
+</ol>
+<h2 id="各种括号的使用："><a href="#各种括号的使用：" class="headerlink" title="各种括号的使用："></a>各种括号的使用：</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>符号名称</th>
+<th>LaTex代码</th>
+<th>样例</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小括号</td>
+<td>()</td>
+<td>\left( x \right)</td>
+<td>$\left( x \right) $</td>
+</tr>
+<tr>
+<td>中括号</td>
+<td>[]</td>
+<td>\left[ \frac12 \right]</td>
+<td>$\left[ \frac12 \right] $</td>
+</tr>
+<tr>
+<td>大括号</td>
+<td>{}</td>
+<td>{ \frac12 }</td>
+<td>${ \frac12 } $</td>
+</tr>
+<tr>
+<td>尖括号</td>
+<td>\langle  \rangle</td>
+<td>\langle \frac12 \rangle</td>
+<td>$\langle \frac12 \rangle$</td>
+</tr>
+<tr>
+<td>向上取整</td>
+<td>\lceil \rceil</td>
+<td>\lceil \frac12 \rceil</td>
+<td>$\lceil \frac12 \rceil $</td>
+</tr>
+<tr>
+<td>向下取整</td>
+<td>\lfloor \rfloor</td>
+<td>\lfloor \frac12 \rfloor</td>
+<td>$\lfloor \frac12 \rfloor $</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><em>注意</em>：\left \right 必须成对出现，当需要只使用一侧的情况，使用 . 代表为空的情况：<br><code>\left . \frac{du}{dx} \right| _{x=0}</code> : $\left . \frac{du}{dx} \right|_{x=0}$</li>
+</ul>
+<h2 id="根号表示："><a href="#根号表示：" class="headerlink" title="根号表示："></a>根号表示：</h2><ol>
+<li><code>\sqrt[3]{\frac xy}</code> : $\sqrt[3]{\frac xy}$</li>
+<li><code>\sqrt{x^3}</code> : $\sqrt{x^3}$</li>
+</ol>
+<h2 id="省略号的使用："><a href="#省略号的使用：" class="headerlink" title="省略号的使用："></a>省略号的使用：</h2><ol>
+<li>对齐底线的省略号： \ldots;</li>
+<li>对齐中间位置的省略号： \cdots;<br><code>f(x_1, x_2, \ldots, x_n) = x_1^2 + x_2^2 + \cdots + x_n^2</code> : $f(x_1, x_2, \ldots, x_n) = x_1^2 + x_2^2 + \cdots + x_n^2$</li>
+</ol>
+<h2 id="矢量表示："><a href="#矢量表示：" class="headerlink" title="矢量表示："></a>矢量表示：</h2><ul>
+<li>使用 \vec{矢量值} 表示：<br><code>\vec{a} \cdot \vec{b}</code> : $\vec{a} \cdot \vec{b} = 0$</li>
+</ul>
+<h2 id="几种集合的表示方式："><a href="#几种集合的表示方式：" class="headerlink" title="几种集合的表示方式："></a>几种集合的表示方式：</h2><p>实数集     <script type="math/tex">\mathbb{R}</script>  $\mathbb{R}$</p>
+<p>复数集      <script type="math/tex">\mathbb{C}</script>   $\mathbb{C}$</p>
+<p>有理数集    <script type="math/tex">\mathbb{Q}</script>     $\mathbb{Q}$ </p>
+<p>无理数集    <script type="math/tex">\mathbb{I}</script>     $\mathbb{I}$</p>
+<p>整数集        <script type="math/tex">\mathbb{Z}</script>    $\mathbb{Z}$</p>
+<p>自然数集     <script type="math/tex">\mathbb{N}</script>    $\mathbb{N}$</p>
+<h2 id="特殊符号："><a href="#特殊符号：" class="headerlink" title="特殊符号："></a>特殊符号：</h2><p>波浪线： <script type="math/tex">1\sim2</script>  $1\sim2$</p>
+<h2 id="希腊字母："><a href="#希腊字母：" class="headerlink" title="希腊字母："></a>希腊字母：</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>小写</th>
+<th>小写LaTex</th>
+<th>中文名称</th>
+<th>大写</th>
+<th>大写LaTex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>$\alpha$</td>
+<td>\alpha</td>
+<td>阿尔法</td>
+<td>$A$</td>
+<td>A</td>
+</tr>
+<tr>
+<td>2</td>
+<td>$\beta$</td>
+<td>\beta</td>
+<td>贝塔</td>
+<td>$B$</td>
+<td>B</td>
+</tr>
+<tr>
+<td>3</td>
+<td>$\gamma$</td>
+<td>\gamma</td>
+<td>伽马</td>
+<td>$\Gamma$</td>
+<td>\Gamma</td>
+</tr>
+<tr>
+<td>4</td>
+<td>$\delta$</td>
+<td>\delta</td>
+<td>德尔塔</td>
+<td>$\Delta$</td>
+<td>\Delta</td>
+</tr>
+<tr>
+<td>5</td>
+<td>$\epsilon$</td>
+<td>\epsilon</td>
+<td>伊普西隆</td>
+<td>$E$</td>
+<td>E</td>
+</tr>
+<tr>
+<td>6</td>
+<td>$\zeta$</td>
+<td>\zeta</td>
+<td>泽塔</td>
+<td>$Z$</td>
+<td>Z</td>
+</tr>
+<tr>
+<td>7</td>
+<td>$\eta$</td>
+<td>\eta</td>
+<td>伊塔</td>
+<td>$H$</td>
+<td>H</td>
+</tr>
+<tr>
+<td>8</td>
+<td>$\theta$</td>
+<td>\theta</td>
+<td>西塔</td>
+<td>$\Theta$</td>
+<td>\Theta</td>
+</tr>
+<tr>
+<td>9</td>
+<td>$\iota$</td>
+<td>\iota</td>
+<td>约塔</td>
+<td>$I$</td>
+<td>I</td>
+</tr>
+<tr>
+<td>10</td>
+<td>$\kappa$</td>
+<td>\kappa</td>
+<td>卡帕</td>
+<td>$K$</td>
+<td>K</td>
+</tr>
+<tr>
+<td>11</td>
+<td>$\lambda$</td>
+<td>\lambda</td>
+<td>拉姆达</td>
+<td>$\Lambda$</td>
+<td>\Lambda</td>
+</tr>
+<tr>
+<td>12</td>
+<td>$\mu$</td>
+<td>\mu</td>
+<td>缪</td>
+<td>$M$</td>
+<td>M</td>
+</tr>
+<tr>
+<td>13</td>
+<td>$\nu$</td>
+<td>\nu</td>
+<td>纽</td>
+<td>$N$</td>
+<td>N</td>
+</tr>
+<tr>
+<td>14</td>
+<td>$\xi$</td>
+<td>\xi</td>
+<td>克西</td>
+<td>$\Xi$</td>
+<td>\Xi</td>
+</tr>
+<tr>
+<td>15</td>
+<td>$\omicron$</td>
+<td>\omicron</td>
+<td>欧米克隆</td>
+<td>$O$</td>
+<td>O</td>
+</tr>
+<tr>
+<td>16</td>
+<td>$\pi$</td>
+<td>\pi</td>
+<td>派</td>
+<td>$\Pi$</td>
+<td>\Pi</td>
+</tr>
+<tr>
+<td>17</td>
+<td>$\rho$</td>
+<td>\rho</td>
+<td>柔</td>
+<td>$P$</td>
+<td>P</td>
+</tr>
+<tr>
+<td>18</td>
+<td>$\sigma$</td>
+<td>\sigma</td>
+<td>西格玛</td>
+<td>$\Sigma$</td>
+<td>\Sigma</td>
+</tr>
+<tr>
+<td>19</td>
+<td>$\tau$</td>
+<td>\tau</td>
+<td>陶</td>
+<td>$T$</td>
+<td>T</td>
+</tr>
+<tr>
+<td>20</td>
+<td>$\upsilon$</td>
+<td>\upsilon</td>
+<td>宇普西隆</td>
+<td>$\Upsilon$</td>
+<td>\Upsilon</td>
+</tr>
+<tr>
+<td>21</td>
+<td>$\phi$</td>
+<td>\phi</td>
+<td>弗爱</td>
+<td>$\Phi$</td>
+<td>\phi</td>
+</tr>
+<tr>
+<td>22</td>
+<td>$\chi$</td>
+<td>\chi</td>
+<td>卡</td>
+<td>$X$</td>
+<td>X</td>
+</tr>
+<tr>
+<td>23</td>
+<td>$\psi$</td>
+<td>\psi</td>
+<td>普赛</td>
+<td>$\Psi$</td>
+<td>\psi</td>
+</tr>
+<tr>
+<td>24</td>
+<td>$\omega$</td>
+<td>\omega</td>
+<td>欧米伽</td>
+<td>$\Omega$</td>
+<td>\omega</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="特殊运算符："><a href="#特殊运算符：" class="headerlink" title="特殊运算符："></a>特殊运算符：</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>微积分运算符</th>
+<th>逻辑运算符</th>
+<th>关系运算符</th>
+<th>集合运算符</th>
+<th>对数运算符</th>
+<th>三角运算符</th>
+<th>戴帽符号</th>
+<th>连线符号</th>
+<th>箭头符号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>$\prime$</td>
+<td>$\because$</td>
+<td>$\pm$</td>
+<td>$\emptyset$</td>
+<td>$\log$</td>
+<td>$\bot$</td>
+<td>$\hat{y}$</td>
+<td>$\overline{a+b+c+d}$</td>
+<td>$\uparrow$</td>
+</tr>
+<tr>
+<td>2</td>
+<td>$\int$</td>
+<td>$\therefore$</td>
+<td>$\times$</td>
+<td>$\in$</td>
+<td>$\lg$</td>
+<td>$\angle$</td>
+<td>$\check{y}$</td>
+<td>$\underline{a+b+c+d}$</td>
+<td>$\downarrow$</td>
+</tr>
+<tr>
+<td>3</td>
+<td>$\iint$</td>
+<td>$\forall$</td>
+<td>$\div$</td>
+<td>$\notin$</td>
+<td>$\ln$</td>
+<td>$30^\circ$</td>
+<td>$\breve{y}$</td>
+<td>$\overbrace{a+\underbrace{b+c}_{1.0}+d}^{2.0}$</td>
+<td>$\Uparrow$</td>
+</tr>
+<tr>
+<td>4</td>
+<td>$\iiint$</td>
+<td>$\exists$</td>
+<td>$\mid$</td>
+<td>$\subset$</td>
+<td></td>
+<td>$\sin$</td>
+<td></td>
+<td></td>
+<td>$\rightarrow$</td>
+</tr>
+<tr>
+<td>5</td>
+<td>$\iiiint$</td>
+<td>$\not=$</td>
+<td>$ \nmid$</td>
+<td>$\supset$</td>
+<td></td>
+<td>$\cos $</td>
+<td></td>
+<td></td>
+<td>$\leftarrow$</td>
+</tr>
+<tr>
+<td>6</td>
+<td>$\oint$</td>
+<td>$\not&gt;$</td>
+<td>$\cdot$</td>
+<td>$\subseteq$</td>
+<td></td>
+<td>$\tan$</td>
+<td></td>
+<td></td>
+<td>$\Rightarrow$</td>
+</tr>
+<tr>
+<td>7</td>
+<td>$\lim$</td>
+<td>$\not\subset$</td>
+<td>$\circ$</td>
+<td>$\supseteq$</td>
+<td></td>
+<td>$\cot$</td>
+<td></td>
+<td></td>
+<td>$\Leftarrow$</td>
+</tr>
+<tr>
+<td>8</td>
+<td>$\infty$</td>
+<td></td>
+<td>$\ast$</td>
+<td>$\bigcap$</td>
+<td></td>
+<td>$\sec$</td>
+<td></td>
+<td></td>
+<td>$\longrightarrow$</td>
+</tr>
+<tr>
+<td>9</td>
+<td>$\nabla$</td>
+<td></td>
+<td>$\bigodot$</td>
+<td>$\bigcup$</td>
+<td></td>
+<td>$\csc$</td>
+<td></td>
+<td></td>
+<td>$\longleftarrow$</td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+<td>$\bigotimes$</td>
+<td>$\bigvee$</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>$\Longrightarrow$</td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+<td>$\bigoplus$</td>
+<td>$\bigwedge$</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>$\Longleftarrow$</td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+<td>$\leq$</td>
+<td>$\biguplus$</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+<td>$\geq$</td>
+<td>$\bigsqcup$</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+<td>$\neq$</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+<td>$\approx$</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+<td>$\equiv$</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+<td>$\sum$</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+<td>$\prod$</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td></td>
+<td>$\coprod$</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/base-content/" rel="tag"># base content</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/04/Hexo_tutorial/" rel="next" title="Hexo Tutorial">
+                <i class="fa fa-chevron-left"></i> Hexo Tutorial
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/04/skip-grams/" rel="prev" title="Skip-Grams">
+                Skip-Grams <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Kun0523</p>
+              <p class="site-description motion-element" itemprop="description">include machine learning, math, psychology,  etc.</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#标记公式："><span class="nav-number">1.</span> <span class="nav-text">标记公式：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#行内公式："><span class="nav-number">1.1.</span> <span class="nav-text">行内公式：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上下标："><span class="nav-number">2.</span> <span class="nav-text">上下标：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求和与求导："><span class="nav-number">3.</span> <span class="nav-text">求和与求导：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分属表示："><span class="nav-number">4.</span> <span class="nav-text">分属表示：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各种括号的使用："><span class="nav-number">5.</span> <span class="nav-text">各种括号的使用：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#根号表示："><span class="nav-number">6.</span> <span class="nav-text">根号表示：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#省略号的使用："><span class="nav-number">7.</span> <span class="nav-text">省略号的使用：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矢量表示："><span class="nav-number">8.</span> <span class="nav-text">矢量表示：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#几种集合的表示方式："><span class="nav-number">9.</span> <span class="nav-text">几种集合的表示方式：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊符号："><span class="nav-number">10.</span> <span class="nav-text">特殊符号：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#希腊字母："><span class="nav-number">11.</span> <span class="nav-text">希腊字母：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊运算符："><span class="nav-number">12.</span> <span class="nav-text">特殊运算符：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"> &copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kun0523</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Muse</a> v6.5.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+    
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

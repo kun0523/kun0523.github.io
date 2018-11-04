@@ -16,7 +16,7 @@
 
 <html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="Learning Notes">
 <meta property="og:description" content="项目文件解释： Folders：   node_modules:存放Node.js的东西，不需要管； scaffolds:存放内容模板，通过scaffold下的文件，可以设置文章中共有的内容； source:存放实际文本内容，这里放 博客.md 草稿.md 页面.md 等文件； themes:存放网页模板，   Files:   .gitignore:设置git同步时忽略的文件 _config.y">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-04T13:05:06.121Z">
+<meta property="og:updated_time" content="2018-11-04T13:17:43.844Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Tutorial">
 <meta name="twitter:description" content="项目文件解释： Folders：   node_modules:存放Node.js的东西，不需要管； scaffolds:存放内容模板，通过scaffold下的文件，可以设置文章中共有的内容； source:存放实际文本内容，这里放 博客.md 草稿.md 页面.md 等文件； themes:存放网页模板，   Files:   .gitignore:设置git同步时忽略的文件 _config.y">
@@ -174,7 +174,7 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
@@ -185,7 +185,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -329,7 +329,7 @@
                 
               
 
-              <time title="创建时间：2018-11-04 13:36:27 / 修改时间：21:05:06" itemprop="dateCreated datePublished" datetime="2018-11-04T13:36:27+08:00">2018-11-04</time>
+              <time title="创建时间：2018-11-04 13:36:27 / 修改时间：21:17:43" itemprop="dateCreated datePublished" datetime="2018-11-04T13:36:27+08:00">2018-11-04</time>
             
 
             
@@ -440,7 +440,7 @@
 </ul>
 </li>
 </ul>
-<ol start="2">
+<ol>
 <li>更改配置文件”_config.yml”中，属性”theme”为自己定义的主题名；</li>
 <li>重启Hexo服务；</li>
 <li>配置各个文件夹下的文件……</li>
@@ -452,7 +452,6 @@
 <li>根据markdown文件生成静态html文件：<code>hexo generate</code> 也可简写为： <code>hexo g</code>;</li>
 <li>将本地文件部署到github上：<code>hexo deploy</code> 也可简写为：<code>hexo d</code>; </li>
 </ol>
-<p>$$ f(X) = \sum_{i=1}^{N}x_i $$</p>
 
       
     </div>
@@ -495,6 +494,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/04/latex-base/" rel="prev" title="latex_base">
+                latex_base <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -564,7 +567,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -579,7 +582,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   
                 </div>
@@ -834,7 +841,24 @@
         }
     });
 </script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
     
   
