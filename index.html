@@ -332,7 +332,7 @@
                 
               
 
-              <time title="创建时间：2018-11-04 13:36:27 / 修改时间：20:19:13" itemprop="dateCreated datePublished" datetime="2018-11-04T13:36:27+08:00">2018-11-04</time>
+              <time title="创建时间：2018-11-04 13:36:27 / 修改时间：21:05:06" itemprop="dateCreated datePublished" datetime="2018-11-04T13:36:27+08:00">2018-11-04</time>
             
 
             
@@ -450,7 +450,14 @@
 <li>重启Hexo服务；</li>
 <li>配置各个文件夹下的文件……</li>
 </ol>
-<p>$$ f(x) = \sum_{i=1}^{N}x_i $$</p>
+<h1 id="部署在GitHub上"><a href="#部署在GitHub上" class="headerlink" title="部署在GitHub上"></a>部署在GitHub上</h1><ol>
+<li>在GitHub上新建仓库，注意仓库名： GitHub用户.github.io  !!坑!!;</li>
+<li>安装git的插件：<code>npm install hexo-deployer-git --save</code>;</li>
+<li>修改配置文件，在deploy区域修改属性：<code>type: git</code>, <code>repo: https://github.com/kun0523/kun0523.github.io.git</code>, <code>branch: master</code>;</li>
+<li>根据markdown文件生成静态html文件：<code>hexo generate</code> 也可简写为： <code>hexo g</code>;</li>
+<li>将本地文件部署到github上：<code>hexo deploy</code> 也可简写为：<code>hexo d</code>; </li>
+</ol>
+<p>$$ f(X) = \sum_{i=1}^{N}x_i $$</p>
 
           
         
